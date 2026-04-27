@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        background-color: rgb(235, 120, 120);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 250px;
+        margin: 20px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px black;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .info {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .price {
+        color: rgb(222, 33, 33);
+        font-weight: bold;
+      }
+
+      .button {
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        margin-top: 10px;
+      }
+
+      /* Hover Effect with the y asix  vertical s */
+      .card:hover {
+        transform: translateY(-10px);
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg"
+        />
+        <div class="info">
+          <h3>Laptop</h3>
+          <p class="price">$500</p>
+          <button class="button">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg" />
+        <div class="info">
+          <h3>Watch</h3>
+          <p class="price">$80</p>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg"
+        />
+        <div class="info">
+          <h3>Camera</h3>
+          <p class="price">$300</p>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

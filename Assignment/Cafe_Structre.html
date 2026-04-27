@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Café</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <h1>Welcome to Rohan's Café ☕</h1>
+    <p>Your favorite place for food and relaxation</p>
+
+    <hr />
+
+    <!-- Navigation Links -->
+    <h3>Navigation</h3>
+    <a href="#menu">Menu</a> | <a href="#order">Order</a> |
+    <a href="#location">Location</a>
+
+    <hr />
+
+    <!-- Image Section -->
+    <h2>Our Café</h2>
+    <img src="https://via.placeholder.com/400" alt="Café Image" />
+
+    <hr />
+
+    <!-- Menu Section -->
+    <h2 id="menu">Menu</h2>
+
+    <h3>Select Your Food</h3>
+    <select>
+      <option>Pizza</option>
+      <option>Burger</option>
+      <option>Biryani</option>
+      <option>Paneer</option>
+      <option>Shahi Paneer</option>
+      <option>Kofta</option>
+    </select>
+
+    <h3>Search Food (Datalist)</h3>
+    <input type="text" list="food_list" />
+
+    <datalist id="food_list">
+      <option value="Pizza"></option>
+      <option value="Burger"></option>
+      <option value="Biryani"></option>
+      <option value="Paneer"></option>
+      <option value="Shahi Paneer"></option>
+      <option value="Kofta"></option>
+    </datalist>
+
+    <hr />
+
+    <!-- Order Form -->
+    <h2 id="order">Place Your Order</h2>
+
+    <form>
+      <label>Name:</label><br />
+      <input type="text" /><br /><br />
+
+      <label>Choose Drink:</label><br />
+      <select>
+        <option>Tea</option>
+        <option>Coffee</option>
+        <option>Cold Coffee</option>
+        <option>Juice</option></select
+      ><br /><br />
+
+      <label>Search Country (Datalist)</label><br />
+      <input type="text" list="country_list" />
+
+      <datalist id="country_list">
+        <option value="India"></option>
+        <option value="Italy"></option>
+        <option value="Iran"></option>
+        <option value="Israel"></option>
+        <option value="Russia"></option>
+        <option value="China"></option></datalist
+      ><br /><br />
+
+      <input type="submit" value="Order Now" />
+    </form>
+
+    <hr />
+
+    <!-- Audio Section -->
+    <h2>Enjoy Music</h2>
+    <audio controls>
+      <source src="sample.mp3" type="audio/mpeg" />
+      Your browser does not support audio.
+    </audio>
+
+    <hr />
+
+    <!-- Video Section -->
+    <h2>Watch Our Café</h2>
+    <video width="320" height="240" controls>
+      <source src="sample.mp4" type="video/mp4" />
+      Your browser does not support video.
+    </video>
+
+    <hr />
+
+    <!-- Map Section -->
+    <h2 id="location">Our Location</h2>
+    <iframe
+      src="https://www.google.com/maps?q=Amravati&output=embed"
+      width="400"
+      height="300"
+    >
+    </iframe>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Rajen's Café | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

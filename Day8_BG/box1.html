@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family:
+          'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: antiquewhite;
+        display: flex;
+      }
+
+      .product {
+        border: 1px solid brown;
+        width: 300px;
+        overflow: hidden;
+        text-align: center;
+        margin: 25px;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 12px black;
+        background-color: white;
+      }
+
+      .product img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: 50%;
+      }
+
+      button {
+        background-color: rgb(95, 218, 8);
+        padding: 15px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .product:hover {
+        color: rgb(48, 162, 185);
+        background-color: rgb(68, 152, 136);
+        transition: 1s;
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Content - Any Type of Content - Text, Image, Video, Audio, Form, etc.
+    border : Surronding from all 4 direction
+    padding : space inside the border - 4 direction
+
+    margin: space oustide the border - 4 direction -->
+
+    <div class="product">
+      <img
+        src="https://images.pexels.com/photos/969462/pexels-photo-969462.jpeg"
+      />
+      <h2>Mobile</h2>
+      <p>$50</p>
+      <button>Add To Cart</button>
+    </div>
+
+    <div class="product">
+      <img
+        src="https://images.pexels.com/photos/16350687/pexels-photo-16350687.jpeg"
+      />
+      <h2>Shoes</h2>
+      <p>$20</p>
+      <button>Add To Cart</button>
+    </div>
+
+    <div class="product">
+      <img
+        src="https://images.pexels.com/photos/20385205/pexels-photo-20385205.jpeg"
+      />
+      <h2>Headphone</h2>
+      <p>$15</p>
+      <button>Add To Cart</button>
+    </div>
+  </body>
+</html>
