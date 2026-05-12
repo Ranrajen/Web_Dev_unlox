@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product {
+        display: grid;
+        /* to create column  -- repeat no. of column and size
+         size --- 1fr -- adjesting with screen  */
+
+        grid-template-columns: repeat(3, 1fr);
+        /* to create row it will row */
+        /* grid-template-rows:  repeat(5, 150px); */
+
+        gap: 3px;
+        background-color: lightcoral;
+
+
+      }
+      .box {
+        background-color: aqua;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Platform For Practice :---https://flexboxfroggy.com/ -->
+    <!-- 2d  grid property of display 
+  -->
+
+    <!-- ROW :-- SIDE BY SIDE
+  COLUMN :-- ONE BELOW EACH -->
+
+    <div class="product">
+      <div class="box">Cake</div>
+      <div class="box">pizza</div>
+      <div class="box">Pastry</div>
+      <div class="box">cookie</div>
+      <div class="box">Rice Cake</div>
+      <div class="box">pedha</div>
+    </div>
+  </body>
+</html>

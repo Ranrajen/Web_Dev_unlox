@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .food {
+        background-color: aquamarine;
+        display: flex;
+        /* moving the cantians togrther comes along with the display flex 
+          in x axis direction   */
+        justify-content: center;
+        height: 400px;
+
+        /* creating the space  */
+        /* justify-content: space-between; */
+
+        /* all direcction space  */
+        /* justify-content: space-around; */
+
+        /* move the contain form top to button -- align item 
+        in y axis direction 
+         */
+        align-items: center;
+
+        /* Creatingthe gap betweeen the cantains
+         */
+        gap: 10px;
+
+        /* change the direction  form roe to column */
+        flex-direction: column;
+      }
+      .box1 {
+        border: 1px solid black;
+        height: 250px;
+        width: 250px;
+        text-align: center;
+        background-color: antiquewhite;
+        font-family:
+          'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h2>Display FLex -- one single dimentinal layout</h2>
+    <p>either row wise or column</p>
+    <p>but default --displaying row wise format- -- side by side</p> -->
+
+    <!--column ---       row -- --- ---
+               ---
+               --- -->
+
+    <!-- flex ---applied to the parent class  -->
+    <h2>Nana Beakery</h2>
+
+    <div class="food">
+      <div class="box1">Cake</div>
+      <div class="box1">Bread</div>
+      <div class="box1">Pizza</div>
+    </div>
+  </body>
+</html>

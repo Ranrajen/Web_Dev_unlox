@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+      body {
+        font-family:
+          'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: azure;
+        margin: 0;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .product {
+        border: 2px solid black;
+        /* hide the part thats going outside  */
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .product img {
+        /* overflow: hidden; */
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/29020349/pexels-photo-29020349.jpeg"
+          alt=""
+        />
+        <h2>I phone</h2>
+        <p>$20000</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/13415380/pexels-photo-13415380.jpeg"
+          alt=""
+        />
+        <h2>Cycle</h2>
+        <p>$500</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/8266891/pexels-photo-8266891.jpeg"
+          alt=""
+        />
+        <h2>Bag</h2>
+        <p>$150</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/10658200/pexels-photo-10658200.jpeg"
+          alt=""
+        />
+        <h2>Watch</h2>
+        <p>$40</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/30758151/pexels-photo-30758151.jpeg"
+          alt=""
+        />
+        <h2>Drone</h2>
+        <p>$8000</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.pexels.com/photos/186037/pexels-photo-186037.jpeg"
+          alt=""
+        />
+        <h2>Shoes</h2>
+        <p>$50</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </body>
+</html>

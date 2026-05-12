@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family:
+          'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: azure;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+        color: black;
+        margin: 10px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        /* justify-content: space-between; */
+        gap: 10px;
+
+        /* make the card responsive and adjest the width of card  */
+        /* IMP */
+
+        flex-wrap: wrap;
+      }
+
+      .memb {
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: aqua;
+        box-shadow: 0 4px 6px slategray;
+
+        text-align: center;
+      }
+
+      .memb img {
+        height: 200px;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MEET In ZOOM</h1>
+
+    <div class="card">
+      <div class="memb">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxIjWcqrVvgOGRApT19iv0fQf1to4WCwrew&s"
+          alt=""
+        />
+        <h3>Visha Bishap</h3>
+        <p>FullSatck</p>
+      </div>
+      <div class="memb">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxIjWcqrVvgOGRApT19iv0fQf1to4WCwrew&s"
+          alt=""
+        />
+        <h3>Riya Rathod</h3>
+        <p>ML engineer</p>
+      </div>
+      <div class="memb">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxIjWcqrVvgOGRApT19iv0fQf1to4WCwrew&s"
+          alt=""
+        />
+        <h3>Priya Dev</h3>
+        <p>Devops</p>
+      </div>
+      <div class="memb">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxIjWcqrVvgOGRApT19iv0fQf1to4WCwrew&s"
+          alt=""
+        />
+        <h3>Kriti Shahane</h3>
+        <p>Python Dev</p>
+      </div>
+    </div>
+  </body>
+</html>

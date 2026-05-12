@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ------------
+     write the script at the buttom of the body 
+     bcs excution line by line  -->
+
+    <h1>Data representation --- Data Type</h1>
+    <!-- --string / text -->
+    <!-- username = "rose" -->
+    <!-- --- num  -->
+    <!-- phone num = 528865 -->
+    <!-- -- boolean -->
+    <!-- log in = true /false -->
+
+    <script>
+      // 1 . String -- anything in the double coat --"  "
+
+      var username = 'Rose Rooso';
+      console.log(username);
+      // typeof-- tell the data type of varible
+      console.log('datatype', typeof username);
+
+      // 2 . Numbers +ve , -ve , fractional , deccimal
+      var price = 56;
+      console.log(typeof price);
+      var price = 57.898;
+      console.log(typeof price);
+      var price = -57.898;
+      console.log(typeof price);
+
+      // 3. Boolean -- true or false
+      var userOnline = true;
+      console.log(userOnline);
+      console.log(typeof userOnline);
+      var userOnline = false;
+      console.log(userOnline);
+      console.log(typeof userOnline);
+
+      //4. Null -- nothing
+      // data type is object of null -- bug of javascript
+      var nul = null;
+      console.log(nul);
+      console.log(typeof nul);
+
+      //   ---clear with concept below there are not cosidered
+      var nul = '';
+      console.log(nul);
+      console.log(typeof nul);
+
+      var nul = 0;
+      console.log(nul);
+      console.log(typeof nul);
+
+      //5. undefined -- not define
+      var a;
+      console.log(a);
+      console.log(typeof a);
+
+      //   --- advanced data type
+
+      console.log('Advance variable');
+      //1 . array -- store the multiple data -- individual data storage  ---same or different type
+      //symbol --- []
+      //rule -- index num start with --0 ;
+
+      var arr = ['john', 246, true];
+      console.log(arr);
+      console.log(arr[0]);
+      //not in arr index
+      console.log(arr[4]);
+      console.log(typeof arr);
+      console.log('Array length', arr.length);
+
+      //2 . object -- storing the multiple data of the same entity -- related data storage
+      // object is a collection of data
+      //symbol - {  }
+      // rule -- KEY : VALUE
+      // seprated by the ,
+      //object is asscesed by dot and end with the {};
+
+      var emp = {
+        name: 'Rose',
+        mail: ' rose@335',
+        id: 877,
+        pno: 4769803,
+      };
+
+      //   -----doubt -- why the 0 is printing -- 0877
+
+      console.log(emp.id);
+
+      //   3. function -- to a task
+      // used to defined the logical step
+      // funnction
+      // symbol ()-- functionn  must call for excution
+
+      function billCalculator() {
+        //body of function
+        // logic -- instruction
+        var product1 = 'Milk';
+        var price1 = 100;
+        var product2 = 'Cold Drink';
+        var price2 = 80;
+        var total = price1 + price2;
+
+        console.log('Total Bill--', total);
+      }
+
+      billCalculator();
+    </script>
+  </body>
+</html>

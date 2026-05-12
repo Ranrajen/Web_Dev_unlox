@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      p.dis1 {
+        display: none;
+      }
+
+      p.dis2 {
+        display: block;
+        background-color: aqua;
+      }
+
+      p.dis3 {
+        display: inline;
+        background-color: blanchedalmond;
+      }
+      p.dis4 {
+        display: inline-block;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Display none</h2>
+    <div>
+      Nothing is Display
+      <p class="dis1">nothing</p>
+    </div>
+    <h2>Display block -- take 100% width</h2>
+    <div>
+      <p class="dis2">take 100% width</p>
+    </div>
+    <h2>Display inline -- like span tag -- only take required spce</h2>
+    <div>
+      <!-- h and w not change -->
+      <p class="dis3">only take required spce</p>
+    </div>
+
+    <h2>display : inline Block</h2>
+    <div>
+      <!-- h and w is change  -->
+      <p class="dis4">display inline block</p>
+    </div>
+  </body>
+</html>
