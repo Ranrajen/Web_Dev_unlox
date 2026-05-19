@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rocvk Paper Scissor</h1>
+    <div>
+      <button id="rock" onclick="playGame('rock')">Rock</button>
+      <button id="paper" onclick="playGame('paper')">Paper</button>
+      <button id="scissor" onclick="playGame('scissor')">Scissor</button>
+    </div>
+
+    <p id="result">Make A choice</p>
+    <div id="scoreBoard">
+      <p><strong>Score board</strong></p>
+      <p>Wins <span id="win">0</span></p>
+      <p>Losses <span id="loss">0</span></p>
+      <p>Draw <span id="draw">0</span></p>
+    </div>
+
+    <script>
+      let win = 0;
+      let loss = 0;
+      let draw = 0;
+
+      function playGame(userChoice) {
+        const choice = ['rock', 'paper', 'scissor'];
+        const computerChoice = choice[Math.floor(Math.random() * 3)];
+        // console.log(computerChoice);
+
+        let resultMessage = '';
+
+        if (userChoice == computerChoice) {
+          console.log('Draw');
+          resultMessage = 'Match Draw';
+          draw++;
+        } else if (
+          (userChoice == 'rock' && computerChoice == 'scissor') ||
+          (userChoice == 'paper' && computerChoice == 'rock') ||
+          (userChoice == 'scissor' && computerChoice == 'paper')
+        ) {
+          resultMessage = 'You Win ' + userChoice + ' Beats ' + computerChoice;
+          win++;
+        } else {
+          resultMessage = 'You Loss ' + computerChoice + ' Beats ' + userChoice;
+          loss++;
+        }
+
+        //DOm
+
+        document.getElementById('win').innerHTML = win;
+        document.getElementById('loss').innerHTML = loss;
+        document.getElementById('draw').innerHTML = draw;
+        document.getElementById('result').innerHTML = resultMessage;
+      }
+      //   playGame('rock');
+    </script>
+  </body>
+</html>

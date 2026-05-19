@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <p id="id1">hi form the html or document</p>
+    <!-- ----------------- -->
+    <div class="div1">HI form the div 1</div>
+    <div class="div1">HI form the div 2</div>
+    <!-- ----------------- -->
+
+    <p>hi form the paragraph 2</p>
+    <p>hi form the paragraph 3</p>
+
+    <!-- -----------------
+      -->
+
+    <div class="box">this ia box</div>
+    <div class="box">this is the circle</div>
+    <script>
+      // dom -- make the connection between the html and js
+      //document is called as webpage in js
+      //1. getElementById()
+
+      const id1 = document.getElementById('id1'); // const no 1 can update it
+      console.log(id1);
+
+      //2. getEmlementByclassname
+      const div1 = document.getElementsByClassName('div1');
+      const div2 = document.getElementsByClassName('div1');
+      console.log(div1);
+
+      //   -------------Accessing the contains ----
+      // testContent
+      console.log(div1[0].textContent);
+      // classname as the array
+
+      //3. by Tagname
+      var p2 = document.getElementsByTagName('p');
+      console.log(p2);
+      console.log(p2[1].textContent);
+      console.log(p2[2].textContent);
+
+      //4 . QuerySelector ()-- it follows the rule of css selector
+      //   .-- class , # -- id
+      // query selector only select the first element
+      var box1 = document.querySelector('.box');
+      console.log(box1.textContent);
+
+      //5 Query Selector ALL
+      var box2 = document.querySelectorAll('.box');
+      console.log(box2); // its array
+      console.log(box2[1].textContent);
+
+
+      
+    </script>
+  </body>
+</html>

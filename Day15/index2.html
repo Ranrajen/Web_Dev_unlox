@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div {
+        margin: 25px;
+        overflow: auto;
+        height: 100px;
+        width: 300px;
+        background-color: aqua;
+      }
+      #myinp {
+        width: 150px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+
+      .content {
+        height: 300px;
+        /* scrollbar-width: 30px; */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome to Event</h2>
+    <input id="myinp" placeholder="type name " />
+    <div id="div">
+      <div class="content">Scroll Inside me</div>
+    </div>
+
+    <script>
+      const input1 = document.getElementById('myinp');
+      const div1 = document.getElementById('div');
+
+      //   #1 ---key up
+      //release the key
+
+      // input1.addEventListener('keyup', function (e){
+      //     console.log("key reaseled-" + e.key)
+      // })
+
+      //   #2 ---key down
+      //key down-- count the num of time key press
+
+      //   input1.addEventListener('keydown', function (e) {
+      //     console.log('key reaseled-' + e.key);
+      //   });
+
+      //#3 Changing the cantain by event handling
+      // change event
+      // change happining in the input
+
+      input1.addEventListener('change', function (e) {
+        console.log('value of the input -' + e.target.value);
+      });
+
+      //4. mouse over
+
+      div1.addEventListener('mouseover', function () {
+        div1.style.backgroundColor = 'green';
+      });
+
+      div1.addEventListener('mouseout', function () {
+        div1.style.backgroundColor = 'red';
+      });
+    </script>
+  </body>
+</html>

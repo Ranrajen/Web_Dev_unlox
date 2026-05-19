@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // building the finding the lucky num guess game
+
+      //Maths-- floor , random
+      // * 6 is the limit of number genration
+      let luckyNum = Math.floor(Math.random() * 6) + 1;
+
+      while (true) {
+        let userNum = prompt('Enter the your Number:- ');
+        if (luckyNum == userNum) {
+          alert('User is win');
+          break;
+        } else {
+          alert('Loss');
+        }
+      }
+
+      console.log(luckyNum);
+    </script>
+  </body>
+</html>

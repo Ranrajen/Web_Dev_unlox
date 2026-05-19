@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* .p2 {
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    } */
+  </style>
+  <body>
+    <!-- update-- css, html , conatent -->
+
+    <p id="p1">this is color green</p>
+
+    <!-- -----------------
+      -->
+    <button id="btn1">Click</button>
+
+    <!-- -------------- -->
+
+    <div id="div1">This form the div 1</div>
+    <!-- ---------- -->
+
+    <p id="p2">change the css style</p>
+
+    <script>
+      const p1 = document.getElementById('p1');
+      console.log(p1.textContent);
+
+      p1.textContent = 'Color is RED';
+      // changing the color  .... green ---> RED
+
+      const btn1 = document.getElementById('btn1');
+      btn1.textContent = 'Reset';
+
+      //2 . updating the TAG
+
+      const div1 = document.getElementById('div1');
+      // for 1 tag
+      //   div1.innerHTML = '<h1>div change to heading </h1>';
+      // for multi tag -- by using `` --- backticks
+
+      div1.innerHTML = `
+<p>this is paragraph tag <mark> changed to para </mark> change by DOM </p>
+`;
+
+      // 3 . change css style
+
+      const p2 = document.getElementById('p2');
+
+      p2.style.color = 'red';
+      p2.style.backgroundColor = 'yellow';
+      p2.style.fontFamily = 'Courier New';
+      p2.style.textAlign = 'center';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- event means action that performed user on webpage -->
+    <!-- action like --- typing , scroll, click , mouse -->
+    <!-- action are the capture by using event listner-- addEventListener -->
+    <!-- SYNTAX---addEventListner(type of Action/Event , Task) -->
+
+    <button id="btn-2">click me</button>
+
+    <p id="para-1"></p>
+
+    <script>
+      //selecting the tag
+      const btnAction = document.getElementById('btn-2');
+      console.log('Hi form console');
+
+      const msg = document.getElementById('para-1');
+
+      //2 . action performed
+
+      btnAction.addEventListener('click', function () {
+        msg.textContent = 'product added';
+      });
+    </script>
+  </body>
+</html>
