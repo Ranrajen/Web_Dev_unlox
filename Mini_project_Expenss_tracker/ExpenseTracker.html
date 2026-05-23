@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #aed9e8;
+        padding: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(9, 116, 222);
+      }
+
+      .dashboard {
+        max-width: 1400px;
+        margin: auto;
+      }
+
+      .upper-bar {
+        /* background: linear-gradient(135deg, #a8f1ff, #4ed7f1); */
+        background: linear-gradient(
+          270deg,
+          #4ed7f1,
+          #a8f1ff,
+          #4cc9fe,
+          #a1e3f9,
+          #37afe1
+        );
+
+        background-size: 1000% 1000%;
+
+        animation: rgbFlow 12s ease infinite;
+        border-radius: 22px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px 28px;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 0 10px 30px rgba(55, 175, 225, 0.25);
+        transition: 0.4s;
+        margin-bottom: 24px;
+        border: 1px solid #8edff5;
+      }
+
+      .upper-bar:hover {
+        transform: translateY(-4px);
+      }
+
+      @keyframes rgbFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        25% {
+          background-position: 50% 100%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        75% {
+          background-position: 50% 0%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .top-layout h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .top-layout p {
+        font-size: 15px;
+        color: #f5feff;
+      }
+
+      .month-div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .month-box {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
+        padding: 14px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .month-box span {
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .month-box input {
+        background: white;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        padding: 7px 12px;
+        margin-left: 10px;
+        color: #37afe1;
+        font-weight: bold;
+      }
+
+      .top-button {
+        background: white;
+        color: #37afe1;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 30px;
+        border: none;
+        padding: 11px 20px;
+        transition: 0.3s;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .top-button:hover {
+        background: #37afe1;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .lower-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .summary-column {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        border-radius: 24px;
+        padding: 22px;
+        box-shadow: 0 10px 25px rgba(76, 201, 254, 0.12);
+        transition: 0.3s;
+        border: 1px solid #d8f5ff;
+      }
+
+      .summary-column:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 35px rgba(55, 175, 225, 0.18);
+      }
+
+      .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1895c7;
+        border-bottom: 2px solid #dff7ff;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+      }
+
+      .summary-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .summary-card {
+        background: linear-gradient(135deg, #f8feff, #e8faff);
+        border-radius: 18px;
+        padding: 18px;
+        transition: 0.3s;
+        border: 1px solid #dff5ff;
+      }
+
+      .summary-card:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(135deg, #a8f1ff, #dff8ff);
+      }
+
+      .summary-card h2 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #4c89a6;
+        margin-bottom: 6px;
+        letter-spacing: 1px;
+      }
+
+      .summary-card h1 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0d6c96;
+        margin-bottom: 4px;
+      }
+
+      .summary-card p {
+        font-size: 12px;
+        color: #6d91a0;
+      }
+
+      .category-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .category-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #e4f8ff;
+      }
+
+      .category-card h2 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #33556b;
+      }
+
+      .category-card h1 {
+        background: #dff7ff;
+        color: #148ec0;
+        padding: 7px 15px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .transaction-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .transaction {
+        background: #f8fdff;
+        border: 1px solid #dff5ff;
+        border-radius: 18px;
+        padding: 15px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .transaction:hover {
+        background: #eefbff;
+        transform: translateX(5px);
+      }
+
+      .transaction-title {
+        font-size: 15px;
+        font-weight: bold;
+        color: #24506a;
+        margin-bottom: 3px;
+      }
+
+      .transaction-date {
+        font-size: 12px;
+        color: #6c8a99;
+      }
+
+      .transaction-amount {
+        background: #dff7ff;
+        color: #148ec0;
+        padding: 7px 14px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <div class="upper-bar">
+        <div class="top-layout">
+          <h1>Expense Tracker</h1>
+          <p>Your Virtual khata Book</p>
+        </div>
+
+        <div class="month-div">
+          <div class="month-box">
+            <span>Month</span> <input type="month" value="2026-05" />
+          </div>
+
+          <button class="top-button">➕Add</button>
+          <button class="top-button">📃PDF</button>
+        </div>
+      </div>
+
+      <div class="lower-box">
+        <div class="summary-column">
+          <div class="section-title">📊 Financial Summary</div>
+
+          <div class="summary-info">
+            <div class="summary-card">
+              <h2>Total Income</h2>
+              <h1>₹35,0000</h1>
+              <p>Earn by you</p>
+            </div>
+            <div class="summary-card">
+              <h2>Total Expense</h2>
+              <h1>₹23,300</h1>
+              <p>Expense by you</p>
+            </div>
+
+            <div class="summary-card">
+              <h2>Total Saving</h2>
+              <h1>₹11,700</h1>
+              <p>Saved by you</p>
+            </div>
+
+            <div class="summary-card">
+              <h2>Top Spending</h2>
+              <h1>₹6,200</h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <!-- -----------
+          -->
+
+        <div class="summary-column">
+          <div class="section-title">📁 Expense Categories</div>
+
+          <div class="category-list">
+            <div class="category-card">
+              <h2>Food & Dining</h2>
+              <h1>₹6,200</h1>
+            </div>
+
+            <div class="category-card">
+              <h2>Shopping</h2>
+              <h1>₹4,600</h1>
+            </div>
+
+            <div class="category-card">
+              <h2>Transport</h2>
+              <h1>₹2,900</h1>
+            </div>
+
+            <div class="category-card">
+              <h2>Utilities</h2>
+              <h1>₹4,100</h1>
+            </div>
+
+            <div class="category-card">
+              <h2>Groceries</h2>
+              <h1>₹3,000</h1>
+            </div>
+
+            <div class="category-card">
+              <h2>Entertainment</h2>
+              <h1>₹2,500</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-column">
+          <div class="section-title">🕒 Recent Transactions</div>
+
+          <div class="transaction-list">
+            <div class="transaction">
+              <div>
+                <div class="transaction-title">🛍️ Amazon · Headphones</div>
+                <div class="transaction-date">18 May 2026</div>
+              </div>
+              <div class="transaction-amount">₹1,299</div>
+            </div>
+
+            <div class="transaction">
+              <div>
+                <div class="transaction-title">🍕 Pizza Hut · Dinner</div>
+                <div class="transaction-date">16 May 2026</div>
+              </div>
+              <div class="transaction-amount">₹850</div>
+            </div>
+
+            <div class="transaction">
+              <div>
+                <div class="transaction-title">⛽ Shell Petrol · Fuel</div>
+                <div class="transaction-date">14 May 2026</div>
+              </div>
+              <div class="transaction-amount">₹1,020</div>
+            </div>
+
+            <div class="transaction">
+              <div>
+                <div class="transaction-title">🎬 Netflix Subscription</div>
+                <div class="transaction-date">12 May 2026</div>
+              </div>
+              <div class="transaction-amount">₹199</div>
+            </div>
+
+            <div class="transaction">
+              <div>
+                <div class="transaction-title">👟 Nike Store · Sneakers</div>
+                <div class="transaction-date">09 May 2026</div>
+              </div>
+              <div class="transaction-amount">₹4,299</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
