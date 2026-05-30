@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*here note that the
+         fetch()-- return promise
+         .then()-- res.json() returns promise
+
+         so its manadatory to return wheen used the {}
+        */
+
+      /*  fetch('https://api.thecatapi.com/v1/images/search')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+              console.log(data[0].url)
+          });
+
+      */
+      fetch('https://api.thecatapi.com/v1/images/search')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data[0]);
+          const div = document.createElement('div');
+          const img = document.createElement('img');
+          img.src = data[0].url;
+          img.width = 300;
+
+          div.appendChild(img);
+          document.body.appendChild(div);
+        })
+
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
