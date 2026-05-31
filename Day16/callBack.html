@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- To achive asynchronise program 
+     callback-- it a function & it is PASSED as The PARAMETER into anther function 
+      -->
+    <script>
+      function DoHomework(subject, callback) {
+        // callback();
+        console.log(`Doing Homework ${subject}`);
+        callback();
+      }
+
+      DoHomework('Biology', function () {
+        console.log('This is the call back function');
+      });
+
+      // ======================================
+      // ==========function with 1 parameter ================
+      // ======================================\
+      function dataCall() {
+        console.log('Data Is Called ');
+      }
+
+      function getData(callBack) {
+        console.log('data is Get ');
+        callBack();
+      }
+
+      getData(dataCall);
+
+      //disadvantage -- here it create he call back hell --- by multiple callback
+    </script>
+  </body>
+</html>
