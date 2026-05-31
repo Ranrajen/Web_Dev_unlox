@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async And Await</title>
+  </head>
+  <body>
+    <script>
+      //standard async function
+      async function asynchronise() {
+        console.log('this is async function ');
+      }
+
+      asynchronise();
+      //arrow async function
+
+      var arrowFunc = async () => {
+        console.log('Arrow Async function');
+      };
+
+      arrowFunc();
+      //here the api wit async
+      fetch(' https://randomuser.me/api/')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.results[0].email);
+        });
+    </script>
+  </body>
+</html>
