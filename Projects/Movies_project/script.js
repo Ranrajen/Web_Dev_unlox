@@ -1,4 +1,4 @@
-const API_KEY = 'c20aa1e9';
+const API_KEY = 'add your api key ';
 
 const searchBtn = document.getElementById('searchBtn');
 const movieDiv = document.querySelector('.movie');
@@ -24,7 +24,7 @@ themeToggle.addEventListener('click', () => {
 
 searchBtn.addEventListener('click', () => {
   const movieName = movieInput.value.trim();
-//   console.log(movieName);
+  //   console.log(movieName);
   if (movieName === '') {
     showError('Please enter a movie name.');
     return;
@@ -52,7 +52,7 @@ async function fetchMovie(movieName) {
     );
 
     const data = await response.json();
-//   console.log(data);
+    //   console.log(data);
     if (data.Response === 'False') {
       showError('Movie not found.');
       return;
@@ -64,8 +64,6 @@ async function fetchMovie(movieName) {
     showError('Something went wrong. Please try again.');
   }
 }
-
-
 
 function displayMovie(data) {
   movieDiv.innerHTML = `
@@ -131,8 +129,6 @@ function displayMovie(data) {
     </div>
   `;
 }
-
-
 
 function showError(message) {
   movieDiv.innerHTML = `

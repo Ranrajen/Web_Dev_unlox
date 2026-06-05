@@ -1,4 +1,4 @@
-const API_KEY = '5b7f56cbe3acb4cec63a889fe2108c75';
+const API_KEY = 'add your key ';
 
 const weatherDiv = document.querySelector('.weather');
 const searchBtn = document.getElementById('searchBtn');
@@ -55,23 +55,21 @@ function fetchWeather(city) {
     });
 }
 
-const themeToggle = document.getElementById("themeToggle");
+const themeToggle = document.getElementById('themeToggle');
 
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark");
-    themeToggle.textContent = "☀️";
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  themeToggle.textContent = '☀️';
 }
 
-themeToggle.addEventListener("click", () => {
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("theme","dark");
-        themeToggle.textContent = "☀️";
-    }else{
-        localStorage.setItem("theme","light");
-        themeToggle.textContent = "🌙";
-    }
-
+  if (document.body.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    localStorage.setItem('theme', 'light');
+    themeToggle.textContent = '🌙';
+  }
 });
