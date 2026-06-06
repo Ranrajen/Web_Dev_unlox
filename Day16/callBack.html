@@ -34,7 +34,63 @@
 
       getData(dataCall);
 
+      // ==========================
+      // =======funnction and arrow function=============
+      // ==========================
+
+      function fun1(callback) {
+        console.log('Function 1');
+        callback();
+      }
+
+      fun1(() => {
+        console.log('Function OF the call Back of the fun 1 ');
+      });
+
+      // ==========================
+      // ======= with arrow function=============
+      // ==========================
+
+      const fun2 = () => {
+        console.log('Fun 2 called ');
+      };
+
+      const fun3 = (callback) => {
+        console.log('Fun 3 called');
+        callback();
+      };
+
+      fun3(fun2);
+
       //disadvantage -- here it create he call back hell --- by multiple callback
+
+      // senario for callback hell
+
+      const fun4 = () => {
+        console.log('Fun 4 called ');
+      };
+
+      const fun5 = (callback) => {
+        console.log('Fun 5 called');
+        callback();
+      };
+      const fun6 = (callback) => {
+        console.log('Fun 6 called');
+        callback();
+      };
+
+      const fun7 = (callback) => {
+        console.log('Fun 7 called');
+        callback();
+      };
+      // pyramid structure during calling
+      fun7(() => {
+        fun6(() => {
+          fun5(() => {
+            fun4();
+          });
+        });
+      });
     </script>
   </body>
 </html>
