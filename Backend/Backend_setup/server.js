@@ -36,42 +36,43 @@ app.listen(8000, () => {
   console.log('The server on port 8000 http://localhost:8000');
 });
 
+/*
+
+--------------------------------------
+|         Important points           |
+|            related to the Node     |
+--------------------------------------
 
 
-// npm init -y
 
- 
+step 1 :- command to create the node app 
+---- npm init -y
+-- create the package.json file 
+step 2 :- run the project file 
+----- node app.js(-- file name --)
+step 3 :- install the express 
+-- here express -- minimal and fixible framework of node js 
+-- its imported as the module 
 
-// npm install moduleName
+=========================================================
+=====important the server needs to run continouse =======
+npx nodemon server.js (here the file name )==============
+=========================================================
 
- 
+ */
 
 // Step1 : import modules
 
 // require('moduleName')
 
- 
-
 // Step 2 : Express App - express()
-
- 
 
 // Step3 : API
 
 // app.methodName('/Address',(req,res)=<{
 
- 
-
 // })
-
- 
 
 // Step 4: Server
 
- 
-
 // app.listen(PORT)
-
-
-
-
