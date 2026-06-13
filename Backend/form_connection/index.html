@@ -1,1 +1,37 @@
-<!-- download the mongoDB and compass -->
+<!-- download the mongoDB and compass --> <h2>Student Registration</h2>
+
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <br><br>
+
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("studentForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value
+            };
+
+            const response = await fetch("http://localhost:3000/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            document.getElementById("result").innerText =
+                result.message;
+        });
+    </script>
