@@ -1,37 +1,47 @@
-<!-- download the mongoDB and compass --> <h2>Student Registration</h2>
-
-    <form id="studentForm">
-        <input type="text" id="name" placeholder="Enter Name" required>
-        <br><br>
-
-        <input type="email" id="email" placeholder="Enter Email" required>
-        <br><br>
-
-        <button type="submit">Submit</button>
+<!-- download the mongoDB and compass -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Log in Page</h2>
+    <form id="form">
+      <p>Name :-</p>
+      <input id="name" type="text" placeholder="name" required />
+      <br />
+      <p>Email Id :-</p>
+      <input id="email" type="email" placeholder="enter email" required />
+      <br />
+      <button type="submit">submit</button>
     </form>
 
     <p id="result"></p>
 
     <script>
-        document.getElementById("studentForm").addEventListener("submit", async (e) => {
-            e.preventDefault();
+      document.getElementById('form').addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-            const data = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value
-            };
+        const data = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+        };
 
-            const response = await fetch("http://localhost:3000/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            document.getElementById("result").innerText =
-                result.message;
+        const response = await ('http://localhost:3000/register',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
         });
+
+        const result = response.json();
+
+        document.getElementById('result').innerText = result.message;
+      });
     </script>
+  </body>
+</html>
