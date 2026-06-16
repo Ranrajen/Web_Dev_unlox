@@ -8,8 +8,15 @@ app.use(express.json());
 
 //post the data
 
+app.get('/', (req, res) => {
+  res.send('Backend Working');
+});
+
 app.post('/register', (req, res) => {
+  console.log('POST request received');
+
   const { name, email } = req.body;
+
   console.log('Name', name);
   console.log('Email', email);
 
