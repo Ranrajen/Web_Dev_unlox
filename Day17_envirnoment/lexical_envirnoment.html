@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js envirnoment</title>
+  </head>
+  <body>
+    <script>
+      /* js and its lexical envirnoment
+Lexical Envirnoment --- its a physical location of the actual code 
+i.e where the funcntion is define (Scope of the function )
+
+
+example ---Global
+│
+├── a = 10
+├── outer()
+└── another()
+      │
+      └── a = 50  */
+// ---------------------------------------------------------------------
+      var a = 10;
+
+      // outer function decleared in global scope -- a = 10 is accessable
+      function outer() {
+        console.log('value of a =', a); // ans--> a = 10
+      }
+
+      function demo() {
+        var a = 50;
+        // a = 50 is not accesasabl
+        outer(); //fucntion call of the outer
+      }
+
+      demo();
+    </script>
+  </body>
+</html>
