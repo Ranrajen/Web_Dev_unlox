@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //shadowing ---variable declared in an inner scope hides (or “shadows”) a variable with the same name in an outer scope.
+      let x = 10;
+
+      function demo() {
+        let x = 20;
+
+        function test() {
+          console.log(x);
+        }
+
+        test();
+      }
+
+      demo();
+    </script>
+  </body>
+</html>
