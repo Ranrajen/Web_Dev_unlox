@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let globalVar = 'I am Global';
+
+      function outer() {
+        let outerVar = 'I am Outer';
+
+        function inner() {
+          let innerVar = 'I am Inner';
+
+          console.log(globalVar);
+          console.log(outerVar);
+          console.log(innerVar);
+        }
+
+        inner();
+      }
+
+      outer();
+    </script>
+  </body>
+</html>
